@@ -19,11 +19,11 @@ function pushName() {
 }
 
 //make numbers every min
-let randomNum = Math.floor(Math.random() * 9999);
+$("#number").text(Math.round(Math.random() * 1000));
 
-const luckyNumber = () => {
-  $("#number").text(randomNum);
-};
+setTimeout(() => {
+  setInterval(() => {
+    $("#number").text(Math.round(Math.random() * 1000));
+  }, 60 * 1000);
+}, 60 - new Date().getSeconds() * 1000);
 
-//call functions
-luckyNumber();
