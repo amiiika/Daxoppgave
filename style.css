@@ -1,0 +1,17 @@
+body{
+ text-align: center;
+ margin-left: 30%;
+ margin-right: 30%;
+ background-color: aliceblue;   
+}
+
+p{
+    font-size: 4vh;
+}
+h1{
+    font-size: 10vh;
+}
+
+label{
+    font-size:2vh ;
+}
