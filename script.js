@@ -11,3 +11,13 @@ function pushName() {
 
   $("#thanks").text("Thanks For Cheking Out My Website " + names.join(", "));
 }
+
+//make numbers
+const luckyNumber = () => {
+  let randomNum = Math.floor(Math.random() * 9999);
+  $("#number").text(randomNum);
+};
+
+
+//call functions
+luckyNumber();
