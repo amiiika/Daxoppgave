@@ -31,8 +31,8 @@ $("#thanks").text("Thanks For Cheking Out My Website " + names.join(", "));
 $("#number").text(Math.round(Math.random() * 9999));
 
 setTimeout(() => {
+  $("#number").text(Math.round(Math.random() * 9999));
   setInterval(() => {
     $("#number").text(Math.round(Math.random() * 9999));
   }, 60 * 1000);
-}, 60 - new Date().getSeconds() * 1000);
-
+}, (60 - new Date().getSeconds()) * 1000);
