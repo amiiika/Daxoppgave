@@ -5,12 +5,21 @@ if (names == null) {
   names = [];
 }
 
-//push and write out names
+//enter = submit
+  $("body").keydown( function(e){
+    if(e.keyCode === 13){
+      e.preventDefault();
+      pushName()
+    }
+  })
 
+//push and write out names
 function pushName() {
   let input = $("#name").val();
   names.push(input);
   localStorage.setItem(nameListKey, JSON.stringify(names));
+  $("#name").val("");
+  
 
   $("#welcome").text(
     "Welcome, we wish you all the best " + names[names.length - 1] + "!"
